@@ -4,19 +4,72 @@
 <title>Коспект</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <head>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="importmap">
+        {
+          "imports": {
+            "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
+          }
+        }
+      </script>
+    <link rel="stylesheet" type="text/css" href="/styles/style.css">
 </head>
 <script src=""></script>
 <body>
 <div class="">
- <h1>Заголовок</h1>
+ <h1>Что такое Vue</h1>
 </div>
 <div>
-    <p>Текст</p>
+    <p>Vue - это фреймворк для создания пользовательских интерфейсов. Он строится поверх стандартных HTML, CSS и JavaScript и предоставляет декларативную, основанную на компонентах модель программирования, которая помогает эффективно разрабатывать пользовательские интерфейсы любой сложности.</br>Вот пример</p>
 </div>
-<div>
-    <a href="page1.html">cсылка 1</a>
-</div>
+<div class="composition-api"><pre class="shiki github-dark vp-code"><code><span class="line"><span style="color:#F97583;">import</span><span style="color:#E1E4E8;"> { createApp, ref } </span><span style="color:#F97583;">from</span><span style="color:#9ECBFF;"> 'vue'</span></span>
+    <span class="line"></span>
+    <span class="line"><span style="color:#B392F0;">createApp</span><span style="color:#E1E4E8;">({</span></span>
+    <span class="line"><span style="color:#B392F0;">  setup</span><span style="color:#E1E4E8;">() {</span></span>
+    <span class="line"><span style="color:#F97583;">    return</span><span style="color:#E1E4E8;"> {</span></span>
+    <span class="line"><span style="color:#E1E4E8;">      count: </span><span style="color:#B392F0;">ref</span><span style="color:#E1E4E8;">(</span><span style="color:#79B8FF;">0</span><span style="color:#E1E4E8;">)</span></span>
+    <span class="line"><span style="color:#E1E4E8;">    }</span></span>
+    <span class="line"><span style="color:#E1E4E8;">  }</span></span>
+    <span class="line"><span style="color:#E1E4E8;">}).</span><span style="color:#B392F0;">mount</span><span style="color:#E1E4E8;">(</span><span style="color:#9ECBFF;">'#app'</span><span style="color:#E1E4E8;">)</span></span></code></pre></div></div>
+    <div class="language-template"><pre class="shiki github-dark vp-code"><code><span class="line"><span style="color:#E1E4E8;">&lt;</span><span style="color:#85E89D;">div</span><span style="color:#B392F0;"> id</span><span style="color:#E1E4E8;">=</span><span style="color:#9ECBFF;">"app"</span><span style="color:#E1E4E8;">&gt;</span></span>
+        <span class="line"><span style="color:#E1E4E8;">  &lt;</span><span style="color:#85E89D;">button</span><span style="color:#E1E4E8;"> @</span><span style="color:#B392F0;">click</span><span style="color:#E1E4E8;">=</span><span style="color:#9ECBFF;">"</span><span style="color:#E1E4E8;">count</span><span style="color:#F97583;">++</span><span style="color:#9ECBFF;">"</span><span style="color:#E1E4E8;">&gt;</span></span>
+        <span class="line"><span style="color:#E1E4E8;">    Count is: {{ count }}</span></span>
+        <span class="line"><span style="color:#E1E4E8;">  &lt;/</span><span style="color:#85E89D;">button</span><span style="color:#E1E4E8;">&gt;</span></span>
+        <span class="line"><span style="color:#E1E4E8;">&lt;/</span><span style="color:#85E89D;">div</span><span style="color:#E1E4E8;">&gt;</span></span></code></pre></div>
+    <div id="app">
+    <button @click="count++">
+      Count is: {{ count }}
+    </button>
+  </div>
+  <div style="margin-bottom:5px ;" class="about">
+    <strong>Приведенный</strong> выше пример демонстрирует две основные возможности Vue:</br>
+</br>
+Декларативный рендеринг: Vue расширяет стандартный HTML с помощью синтаксиса шаблонов, который позволяет нам декларативно описывать HTML-вывод на основе состояния JavaScript.
+</br></br>
+Реактивность: Vue автоматически отслеживает изменения состояния JavaScript и эффективно обновляет DOM при изменениях.
+  </div>
+  <hr size="1" width="100%" color="#363636">
+  <div class="about">
+    <p class="as"><strong>Vue разработан так,</strong> чтобы быть гибким и постепенно адаптируемым. В зависимости от конкретной задачи, Vue можно использовать по-разному:</p>
+  </br></br>
+  <ul><li>Улучшение статического HTML без этапа сборки</li>
+    <li>Встраивание в качестве веб-компонентов на любую страницу</li>
+    <li>Одностраничное приложение (SPA)</li>
+    <li>Fullstack / Server-Side Rendering (SSR)</li>
+    <li>Jamstack / Static Site Generation (SSG)</li>
+    <li>Нацеливание на настольные и мобильные компьютеры, WebGL и даже терминал</li>
+</ul>
+  </div>
+  
+  <script type="module">
+   import { createApp, ref } from 'vue'
 
+createApp({
+  setup() {
+    return {
+      count: ref(0)
+    }
+  }
+}).mount('#app')
+  </script>
 </body>
 </html>

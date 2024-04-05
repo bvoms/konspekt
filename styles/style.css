@@ -1,9 +1,89 @@
+body {
+    background-color:#1a1a1a ;
+    overflow-x:hidden
+
+}
 p {
+    font-family: Montserrat;
+    font-size: 18px;
     text-align: center;
+    color: #dcd8db;
 }
 h1 {
     text-align: center;
+    color: #dcd8db;
 }
+div {
+    color: #dcd8db;
+}
+
 a {
     text-align: center;
+}
+code {
+    display: block;
+    padding: 0 24px;
+    width: fit-content;
+    min-width: 100%;
+    line-height: var(--vt-doc-code-line-height);
+    font-size: var(--vt-doc-code-font-size);
+    color: #a6accd;
+    transition: color .5s; }
+pre {
+        position: relative;
+        z-index: 1;
+        margin: 0;
+        padding: 14px 0;
+        background: transparent;
+        
+    }
+    
+        .vt-doc {
+            --vt-doc-code-font-size: 14px;
+            --vt-doc-code-line-height: 1.5;
+        }
+        .vt-doc {
+            font-size: 16px;
+            line-height: 1.7;
+        }       
+        .vt-doc div[class*=language-]+div[class*=language-], .vt-doc div[class$=-api]+div[class*=language-], .vt-doc div[class*=language-]+div[class$=-api]>div[class*=language-]:first-child {
+            margin-top: -16px;
+        }
+        .dark .vt-doc div[class*=language-] {
+            background-color: var(--vt-c-bg-soft);
+        }
+        .vt-doc div[class*=language-] {
+            position: relative;
+            margin: 28px -24px;
+            background-color: #292d3e;
+            
+            transition: background-color .5s;
+        }
+        .composition-api {
+            background-color: #292d3e;
+        }
+    
+        pre, code, kbd, samp {
+            font-family: var(--vt-font-family-mono);
+        
+        }
+        
+.language-template {
+    margin-top: 10px;
+    background-color: #292d3e;
+}
+#app {
+    margin-top: 10px;
+}    
+.as {
+    font-family: Montserrat;
+    font-size: 18px;
+    color: #dcd8db;
+    text-align:left;
+}
+.about {
+    font-family: Montserrat;
+    font-size: 18px;
+    width: 100%;
+    margin-top: 30px;
 }
